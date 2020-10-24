@@ -23,8 +23,8 @@ body {
 /* Header Section */
 header {
   background-color: #fff;
-  max-height: 200px;
-  max-width: 960px;
+  height: 50px;
+  margin: 0 100px;
 }
 
 header > .container {
@@ -145,6 +145,7 @@ main {
 
 .testing-description {
   padding: 10px;
+  width: 700px;
 }
 
 .testing-description > h2 {
@@ -168,3 +169,15 @@ main {
 }
 
 /* Footer Section */
+footer {
+  background-color: #4a5568;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+footer > .container {
+  margin-left: 150px;
+}
