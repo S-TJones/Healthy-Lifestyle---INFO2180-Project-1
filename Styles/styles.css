@@ -79,13 +79,15 @@ main {
 
 .overview-image-hero {
   float: left;
-  margin: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .overview-hero-image > img {
   height: 140px;
-  width: 140px;
+  width: 180px;
   padding: 10px;
+  vertical-align: middle;
 }
 
 .overview-hero-text {
