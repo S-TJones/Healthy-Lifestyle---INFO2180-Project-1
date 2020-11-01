@@ -22,11 +22,10 @@ var driver = function(){
 
         // Checks to see if no data was entered in the input field
         if(user_mail === ""){
-            display.innerHTML = "ERROR";
+            display.innerHTML = "Please enter a valid email address."; // Sets the text in the div
         }
         else{
-            // Sets the text in the div
-            display.innerHTML = (first + user_mail + second);
+            display.innerHTML = (first + user_mail + second); // Sets the text in the div
         }
 
         
