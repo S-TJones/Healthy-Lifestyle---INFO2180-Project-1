@@ -1,8 +1,9 @@
 /* Add your JavaScript to this file */
 
+// Driver function
 var driver = function(){
-    var first = "Thank you! your email address <";
-    var second = "> has been added to our mailing list!";
+    var first = "Thank you! your email address ";
+    var second = " has been added to our mailing list!";
 
     // Locates the div "message" and button "btn"
     var display = document.getElementsByClassName("message")[0];
@@ -21,15 +22,24 @@ var driver = function(){
         var user_mail = email_field.value;
 
         // Checks to see if no data was entered in the input field
-        if(user_mail === ""){
+        if(user_mail === "" || user_mail === null){
             display.innerHTML = "Please enter a valid email address."; // Sets the text in the div
         }
-        else{
+        else if( validateEmail(user_mail) ){
             display.innerHTML = (first + user_mail + second); // Sets the text in the div
         }
-
         
     });
+}
+
+// A simple form validation function
+function validateEmail(email) 
+{
+    // Regular expression for a simple email
+    var re = /\S+@\S+\.\S+/;
+
+    // Checks for the above pattern in the email entered
+    return re.test(email);
 }
 
 // Runs this function on startup
